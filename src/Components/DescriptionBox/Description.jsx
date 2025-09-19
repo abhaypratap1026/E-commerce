@@ -2,12 +2,12 @@ import React from 'react'
 
 const Description = () => {
     return (
-        <div className='descriptionbox my-[120px] mx-[170px]'>
-            <div className='descriptionbox-navigator flex'>
+        <div className='descriptionbox my-[120px] mx-[170px] xl:m-[60px] md:my-[60px] md:mx-[20px]'>
+            <div className='descriptionbox-navigator flex mt-[-112px] sm:mt-[0px]'>
                 <div className="descriptionbox-nav-box flex items-center justify-center text-[16px] font-semibold w-[171px] h-[70px] border-[1px] border-solid border-[#d0d0d0]">Description</div>
                 <div className="descriptionbox-nav-box fade flex items-center justify-center text-[16px] font-semibold w-[171px] h-[70px] border-[1px] border-solid border-[#d0d0d0]  bg-[#FBFBFB] text-[#555]">Reviews (122)</div>
             </div>
-            <div className="descriptionbox-description flex flex-col gap-[25px] border-[1px] border-solid border-[#D0D0D0] p-[48px] pb-[70px]">
+            <div className="descriptionbox-description flex flex-col gap-[25px] border-[1px] border-solid border-[#D0D0D0] pb-0 p-[48px] sm:pb-[70px] md:text-[14px]">
                 <p>An eCommerce website is an online platform that allows businesses to showcase and
                     sell their products or services over the internet. It provides features
                     like product listings, shopping carts, secure payment gateways, and

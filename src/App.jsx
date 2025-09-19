@@ -16,7 +16,7 @@ function App() {
   return (
     <div className='overflow-x-hidden'>
         <ShopContextProvider>
-      <BrowserRouter>
+      <BrowserRouter basename='/E-commerce' >
         <Navbar />
         <Routes>
           <Route path='/' element={<Shop />} />

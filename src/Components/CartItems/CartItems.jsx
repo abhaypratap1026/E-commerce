@@ -4,6 +4,7 @@ import remove_icon from '../Assets/cart_cross_icon.png'
 import './CartItems.css'
 const CartItems = () => {
     const {getTotalCartAmount,all_product, cartItems, removeFromCart } = useContext(ShopContext);
+    console.log(all_product);
     return (
         <div className='cartitems my-[100px] mx-[170px]'>
             <div className='cartitems-format-main '>
@@ -19,7 +20,7 @@ const CartItems = () => {
                 if (cartItems[e.id] > 0) {
                     return( <div key={e.id}>
                         <div className='cartitems-format'>
-                            <img src={e.image} alt="" className='carticon-product-icon h-[62px]' />
+                            <img src={e.image} alt="" className='carticon-product-icon h-[62px] max-w-none' />
                             <p>{e.name}</p>
                             <p>${e.new_price}</p>
                             <button className='cartitems-quantity w-[64px] h-[50px] border-[2px] border-solid border-[#ebebeb] bg-[#fff]'>{cartItems[e.id]}</button>
