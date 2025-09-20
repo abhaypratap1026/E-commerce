@@ -6,32 +6,40 @@ import whatsapp_icon from '../Assets/whatsapp_icon.png';
 
 const Footer = () => {
     return (
-        <div className='footer flex flex-col justify-center items-center mt-[200px] sm:mt-0 gap-[50px] md:gap-[20px]'>
-            <div className='footer-logo flex items-center gap-[20px] md:gap-[10px] md:items-end'>
-                <img className='md:w-[40px]' src={footer_logo} alt="" />
-                <p className='text-[#383838] text-[46px] font-bold md:text-[25px]'>SHOPPER</p>
+        <div className='footer flex flex-col justify-center items-center gap-[40px] sm:gap-[20px] px-4 sm:px-2'>
+            
+            {/* Logo */}
+            <div className='footer-logo flex items-center gap-[20px] md:gap-[10px]'>
+                <img className='w-[60px] md:w-[40px]' src={footer_logo} alt="Logo" />
+                <p className='text-[#383838] text-[46px] md:text-[25px] font-bold'>SHOPPER</p>
             </div>
-            <ul className="footer-links flex list-none gap-[50px] text-[#252525] text-[20px] cursor-pointer md:text-[14px] md:gap-[10px]">
+
+            {/* Links */}
+            <ul className="footer-links flex flex-wrap justify-center list-none gap-[30px] sm:gap-[15px] text-[#252525] text-[20px] md:text-[14px]">
                 <li>Company</li>
                 <li>Products</li>
                 <li>Offices</li>
                 <li>About</li>
                 <li>Contact</li>
             </ul>
-            <div className="footer-social-icon flex gap-[20px]">
-                <div className="footer-icons-container p-[10px] pb-[6px] bg-[#fbfbfb] border-[1px] border-solid border-[#ebebeb]">
-                    <img className='md:w-[22px]' src={instagram_icon} alt="" />
+
+            {/* Social Icons */}
+            <div className="footer-social-icon flex gap-[20px] sm:gap-[10px]">
+                <div className="footer-icons-container p-[10px] pb-[6px] bg-[#fbfbfb] border border-[#ebebeb] rounded-md">
+                    <img className='w-[28px] md:w-[22px]' src={instagram_icon} alt="Instagram" />
                 </div>
-                <div className="footer-icons-container  p-[10px] pb-[6px] bg-[#fbfbfb] border-[1px] border-solid border-[#ebebeb]">
-                    <img src={pintester_icon} alt="" />
+                <div className="footer-icons-container p-[10px] pb-[6px] bg-[#fbfbfb] border border-[#ebebeb] rounded-md">
+                    <img className='w-[28px] md:w-[22px]' src={pintester_icon} alt="Pinterest" />
                 </div>
-                <div className="footer-icons-container  p-[10px] pb-[6px] bg-[#fbfbfb] border-[1px] border-solid border-[#ebebeb]">
-                    <img src={whatsapp_icon} alt="" />
+                <div className="footer-icons-container p-[10px] pb-[6px] bg-[#fbfbfb] border border-[#ebebeb] rounded-md">
+                    <img className='w-[28px] md:w-[22px]' src={whatsapp_icon} alt="WhatsApp" />
                 </div>
             </div>
-            <div className="footer-copyright flex flex-col items-center gap-[30px] w-[100%] mb-[30px] text-[#1a1a1a] text-[20px] md:text-[13px]">
-                <hr className='w-[80%] border-none rounded-[10px] h-[3px] bg-[#c7c7c7]'/>
-                <p>Copyright @ 2025 - All Right Reserved.</p>
+
+            {/* Copyright */}
+            <div className="footer-copyright flex flex-col items-center gap-[20px] w-full mb-[20px] text-[#1a1a1a] text-[16px] md:text-[13px]">
+                <hr className='w-[80%] border-none rounded-[10px] h-[2px] bg-[#c7c7c7]'/>
+                <p className='text-center px-2'>Copyright © 2025 - All Rights Reserved.</p>
             </div>
         </div>
     )

@@ -1,18 +1,33 @@
-import React from 'react'
-import data_product from '../Assets/data'
-import Item from '../Item/Item'
+import React from "react";
+import data_product from "../Assets/data";
+import Item from "../Item/Item";
+
 const RelatedProducts = () => {
   return (
-    <div className='relatedproducts flex flex-col items-center gap-[10px] h-[90vh] xl:h-[70vh] lg:h-[60vh] md:h-[50vh] md:gap-[6px]'>
-        <h1 className='text-[#171717] text-[50px] mt-[-90px] sm:mt-0 font-semibold xl:text-[40px] lg:text-[30px] md:text-[20px]'>Related Products</h1>
-        <hr className='w-[200px] h-[6px] rounded-[10px] bg-[#252525] xl:w-[160px] xl:h-[4px] lg:w-[120px] lg:h-[3px] md:w-[100px] ' />
-        <div className="relatedproducts-item grid grid-cols-2  gap-[30px] sm:mt-[50px] sm:flex sm:gap-[20px] xl:gap-[20px] xl:mt-[30px] lg:gap-[15px] lg:mt-[20px] md:gap[5px]">
-            {data_product.map((item,i)=>{
-                return <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price}/>
-            })}
-        </div>
-    </div>
-  )
-}
+    <div className="relatedproducts flex flex-col items-center gap-6 my-16 px-4 sm:px-6 md:px-10">
+      {/* Title */}
+      <h1 className="text-[#171717] text-3xl sm:text-4xl md:text-5xl font-semibold text-center">
+        Related Products
+      </h1>
 
-export default RelatedProducts
+      {/* Divider */}
+      <hr className="w-24 sm:w-40 h-1 sm:h-1.5 rounded-full bg-[#252525]" />
+
+      {/* Items Grid */}
+      <div className="relatedproducts-item grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mt-8 w-full max-w-6xl">
+        {data_product.map((item, i) => (
+          <Item
+            key={i}
+            id={item.id}
+            name={item.name}
+            image={item.image}
+            new_price={item.new_price}
+            old_price={item.old_price}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default RelatedProducts;
